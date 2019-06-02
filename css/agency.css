@@ -601,6 +601,14 @@ section#contact .section-heading {
   color: #fff;
 }
 
+section#contact .text-blocks {
+  color: #fff;
+}
+
+section#contact .text-blocks .title {
+  font-size: 1.5em;
+}
+
 section#contact .form-group {
   margin-bottom: 25px;
 }
