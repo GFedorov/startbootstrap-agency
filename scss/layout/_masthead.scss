@@ -1,21 +1,26 @@
 // Styling for the masthead
 header.masthead {
   text-align: center;
-  color: $primary;
+  color: black;
   background-image: url('../img/header-bg.jpg');
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
   background-size: cover;
-  .intro-text {
+
+  
+    .container {
+
+    }
+    .intro-text {
     padding-top: 150px;
     padding-bottom: 100px;
+
     .intro-lead-in {
       font-size: 22px;
       font-style: italic;
       line-height: 22px;
       margin-bottom: 25px;
-      background-color: rgba(0,0 ,0 , 0.4);
       @include serif-font;
     }
     .intro-heading {
@@ -34,7 +39,7 @@ header.masthead {
             padding-top: 300px;
             padding-bottom: 200px;
 
-            .intro-lead-in {
+            .intro-heading {
                 font-size: 40px;
                 font-style: italic;
                 line-height: 40px;
@@ -42,11 +47,12 @@ header.masthead {
                 @include serif-font;
             }
 
-            .intro-heading {
-                font-size: 75px;
+            .intro-lead-in {
+                font-size: 50px;
                 font-weight: 700;
                 line-height: 75px;
                 margin-bottom: 50px;
+                text-shadow: 1px 1px 2px black, 0 0 1em grey;
                 @include heading-font;
             }
         }
