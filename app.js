@@ -6,12 +6,16 @@ const port = 3000
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 
+
+
 app.get('/', function (req, res) {
     res.render('home');
 });
+ app.get('/contact', function (req, res) {
+    res.render('contact');
+});
  
 
-app.get('/contacts', (req, res) => res.send('Contatcs page'))
 
 app.use(express.static("public"));
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))

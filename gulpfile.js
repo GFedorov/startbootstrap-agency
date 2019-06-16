@@ -84,12 +84,12 @@ function css() {
     .pipe(header(banner, {
       pkg: pkg
     }))
-    .pipe(gulp.dest("./css"))
+    .pipe(gulp.dest("./public/css"))
     .pipe(rename({
       suffix: ".min"
     }))
     .pipe(cleanCSS())
-    .pipe(gulp.dest("./css"))
+    .pipe(gulp.dest("./public/css"))
     .pipe(browsersync.stream());
 }
 
@@ -97,10 +97,10 @@ function css() {
 function js() {
   return gulp
     .src([
-      './js/*.js',
-      '!./js/*.min.js',
-      '!./js/contact_me.js',
-      '!./js/jqBootstrapValidation.js'
+      './public/js/*.js',
+      '!./public/js/*.min.js',
+      '!./public/js/contact_me.js',
+      '!./public/js/jqBootstrapValidation.js'
     ])
     .pipe(uglify())
     .pipe(header(banner, {
@@ -109,14 +109,14 @@ function js() {
     .pipe(rename({
       suffix: '.min'
     }))
-    .pipe(gulp.dest('./js'))
+    .pipe(gulp.dest('./public/js'))
     .pipe(browsersync.stream());
 }
 
 // Watch files
 function watchFiles() {
   gulp.watch("./scss/**/*", css);
-  gulp.watch(["./js/**/*", "!./js/**/*.min.js"], js);
+  gulp.watch(["./public/js/**/*", "!./public/js/**/*.min.js"], js);
   gulp.watch("./**/*.html", browserSyncReload);
 }
 
