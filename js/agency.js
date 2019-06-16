@@ -39,4 +39,9 @@
   // Collapse the navbar when page is scrolled
   $(window).scroll(navbarCollapse);
 */
+$("#products button").click(function(){
+  var id = $(this).attr("data-id")
+  $("#products .item").hide()
+  $("#products .item[data-id="+id+"]").show("slow")
+})
 })(jQuery); // End of use strict
