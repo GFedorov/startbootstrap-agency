@@ -13,7 +13,7 @@ app.get('/', function (req, res) {
 
 app.get('/contacts', (req, res) => res.send('Contatcs page'))
 
-
+app.use(express.static("public"));
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
 
  
